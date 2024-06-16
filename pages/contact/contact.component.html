@@ -1,0 +1,82 @@
+<div class="nik">
+    <div class="container ">
+        <div class="card anot">
+            <div class="row">
+                <div class="col-md-12 contact">
+                    <h2> Can We Help You ?</h2>
+                    <p>Please Feel Free To Contact Us</p>
+
+
+
+
+
+
+                    <form [formGroup]="contactForm" (ngSubmit)="Contact()">
+                        <div class="card sect">
+                            <div class="row sect1">
+                                <div class="col-6 ">
+                                    <h3>For Help Reach Out </h3>
+                                    <h5><i class="bi bi-geo-alt-fill"></i>&nbsp;&nbsp;<b>Address </b>:- 301,3rd
+                                        Floor,New Delhi-110034</h5>
+                                    <h5><i class="bi bi-telephone"></i>&nbsp;&nbsp;<b>Call</b> :- +1 (510) 756-3283</h5>
+                                    <h5><i class="bi bi-envelope-fill"></i>&nbsp;&nbsp;<b>Email </b>:- support@template
+                                        .com</h5>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label for="firstname"><b>Name : </b></label>
+                                    <input type="text" class="form-control" placeholder="Enter  name"
+                                        formControlName="name" (keydown)="onKeyDown($event)">
+                                    <div class="error"
+                                        *ngIf="(contactFormControl['name'].touched || submitted) && (contactFormControl['name']['errors']?contactFormControl['name']['errors']['required'] : '')">
+                                        field is required</div>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="email"><b>Email : </b></label>
+                                    <input type="text" class="form-control" placeholder="Enter Email"
+                                        formControlName="email">
+                                    <div class="error"
+                                        *ngIf="(contactFormControl['email'].touched || submitted) && (contactFormControl['email']['errors']?contactFormControl['email']['errors']['required'] : '')">
+                                        field is required</div>
+                                    <div class="error"
+                                        *ngIf="(contactFormControl['email'].touched || submitted) && (contactFormControl['email']['errors']?contactFormControl['email']['errors']['pattern'] : '')">
+                                        please enter valid email</div>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="subject"><b>Subject : </b></label>
+                                    <input type="text" class="form-control" placeholder="Enter subject"
+                                        formControlName="subject">
+                                    <div class="error"
+                                        *ngIf="(contactFormControl['subject'].touched || submitted) && (contactFormControl['subject']['errors']?contactFormControl['subject']['errors']['required'] : '')">
+                                        field is required</div>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="desc"><b>Description: </b></label>
+                                    <input type="textarea" class="form-control" placeholder="Description"
+                                        formControlName="description">
+                                </div>
+                                <!-- <div class="error"
+                                *ngIf="(contactFormControl['description'].touched || submitted) && (contactFormControl['description']['errors']?contactFormControl['description']['errors']['required'] : '')">
+                                field is required</div> -->
+
+                                <button type="submit" [disabled]="!contactForm.valid"
+                                    class="btn btn-success">Contact</button> <!-- [disabled]="!signupForm.valid"-->
+                            </div>
+                        </div>
+                    </form>
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>

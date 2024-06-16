@@ -1,0 +1,71 @@
+<div class="back">
+<div class="feedback">
+    <h2>FEEDBACK FORM</h2>
+    <p>Dear Customer,<br>
+    Thank you for getting your Food services at our workshop. We would like to know how we performed. Please spare some moments to give us your valuable feedback as it will help us in improving our service.</p>
+    <h4>Please rate your service experience for the following parameters</h4>
+   
+    <form  [formGroup]="textareaForm" (ngSubmit)="feedback()" >
+    
+    <label>1. Your overall experience with us ?</label><br>
+    <div class="rate" style="font-size:3rem;color: orange;"  >
+        <ngb-rating  [max]="5" [(rate)]="currentRate" [readonly]="false"  formControlName="rate">
+        </ngb-rating>
+    </div>
+      <pre class="post">
+        Rating: <b>{{currentRate}}</b>
+      </pre>
+    
+     
+    <label>2. Friendliness and courtesy show to you white delivery of your Food?</label><br>
+    <div class="rate" style="font-size:3rem;color: orange;" >
+        <ngb-rating [max]="5" [(rate)]="newRate" [readonly]="false"  formControlName="Rat">
+        </ngb-rating>
+         
+    </div>
+      <pre class="pre">
+        Rating: <b>{{newRate}}</b>
+      </pre>
+  
+
+
+    <label>3.What is the taste of our Meal ?</label><br>
+    <div class="col-md-12 form-group type" ><br>
+       <select  name="area" class="control"  formControlName="taste">
+           <option value=""> Select type</option>
+           <option value="Poor">Poor</option>
+           <option value="Fair">Fair</option>
+          <option value="Good">Good</option>
+          <option value="Very Good">Very Good</option>
+          <option value="Excellent">Excellent</option>
+          <option value="Outstanding"> Outstanding</option>  
+          
+        </select>
+       
+         <span style="color: red;" *ngIf="textareaForm.touched && !textareaForm.value.taste"> required</span>  
+ </div><br>
+ 
+ 
+ 
+    <label for="comment">4. Any Other suggestions:</label><br><br><br>
+    <div  class="area" style="font-style: italic;">
+      {{ remainingWords }}/150
+    </div>
+    <textarea 
+      formControlName="textinput"
+      (keyup)="wordCounter()" 
+       cols="91" rows="5" 
+       oncopy="return false;" 
+      onpaste="return false;" 
+      oncut="return false;"></textarea>
+
+  
+  
+  
+     <input  class="but"  type="submit" value="Submit your review">  
+    </form>
+    </div>
+  </div>    
+
+    
+    

@@ -1,0 +1,107 @@
+.cart{
+    height:auto;
+    width: 100%;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+   
+}
+.cart h1{
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    margin-left: 4rem;
+    color: brown;
+}
+.form-group {
+    width: 41vw;
+    padding: .5rem;
+    margin-left: 4rem;
+}
+.form-group label{
+    padding-bottom: .6rem;
+}
+.type{
+    margin-left: 5rem;
+}
+.ct img{
+    width: 30vw;
+    height: 53vh;
+    float: right;
+    margin-right: -36rem;
+    margin-top: -25rem;
+    border: 1px solid black;
+}
+.select{
+    width: 20vw;
+    margin-right: 16rem;
+    margin-left: 5rem;
+    padding: .6rem;
+}
+.select label{
+    padding-bottom: .6rem;
+}
+.car{
+    width: 18vw;
+    margin-left: -14rem;
+    height: 2.5rem;
+    margin-top: 2.6rem;
+}
+.btn{
+    margin-left: 39rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.error{
+    color: red;
+    margin-left: 5rem;
+}
+
+
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width:1024px) {
+
+    .ct img{
+        height: 24vh;
+     border: 0px;
+      margin-right: -18rem;
+    }
+    .car{
+        margin-left: 15rem;
+    height: 2.5rem;
+    margin-top: -2.9rem;
+    width: 15vw;
+    }
+    .form-group{
+        width: 18rem;
+    }
+    .btn{
+        margin-left: 8rem;
+    }
+}
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width:767px) { 
+.cart{
+    width: 171%;
+}
+.ct img{
+    width: 57vw;
+    height: 27vh;
+    margin-right: 3rem;
+}
+.form-control{
+    width: 60vw;
+}
+.car{
+   
+    margin-top: 0.6rem;
+    margin-left: 6rem;
+}
+.btn{
+    margin-left: 5rem;
+}
+.select{
+    margin-left: -10rem;
+    margin-top: 6rem;
+}
+}

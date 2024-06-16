@@ -1,0 +1,224 @@
+.crd1{
+    border-radius: 2rem;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+}
+.crd2{
+    border-radius: 2rem;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+}
+.cdr img{
+    display: none;
+}
+.us h1{
+   margin-left: -4rem;
+    padding-top: 3rem;
+    font-weight: 700;
+}
+.us h1:hover{
+       color: rgb(87, 165, 42);
+}
+.us h2{
+    display: none;
+}
+.us p{
+    font-size: 1.5rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+}
+.us h5{
+    font-weight:bold;
+     margin-left: 3rem;
+      padding-top: 10rem;
+}
+.crd1 img{
+        height: 60vh;
+        width: 39vw;
+       float: right;
+       padding: 3rem;
+       border-radius: 5rem;
+}
+.food p{
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+.food img{
+    height: 60vh;
+    width: 39vw;
+    padding: 3rem;
+    margin-top: -2rem;
+    border-radius: 5rem;
+}
+.think{
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.think1{
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.think1 h4{
+    padding-top: 2rem;
+    color: blueviolet;
+    font-size: 2rem;
+}
+.think1 p{
+    padding-bottom: 3rem;
+}
+.foodbox{
+display: none;
+}
+.buybtn{
+    display: none;
+}
+.cdr a{
+    display: none;
+}
+.pawan{
+    display: none;
+}
+
+
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width:1024px) { 
+    .us img{
+        height: 35vh;
+        width: 70vw;
+        margin-right: 4rem;
+}
+.us h5{
+    padding-top: 32rem;
+}
+.us p{
+    margin-right: -21rem;
+}
+.food img{
+    height: 35vh;
+    width: 69vw;
+    margin-right: -18rem;
+}
+.food p{
+    padding-top: 25rem;
+    margin-left: -19rem;
+    padding-bottom: 2rem;
+}
+}
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width:767px) { 
+    .cdr {
+        display: block;
+        background-image: url(../../../assets/img/restaurant.jpg);
+        background-repeat: no-repeat;
+        padding-left: 8rem;
+         width: 178%; 
+        max-height: 150vh;
+        min-height: 130vh;
+       background-size: cover;
+       padding-top: 1rem;
+    }
+    .pawan{
+        display: block;
+        border-radius: 2rem;
+       box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+       width: auto;
+       height: auto;
+       margin-left: -8rem;
+       padding: 2rem;
+        margin-top: 171%; 
+      
+
+    }
+    .pawan h1{
+        font-size: 30px;
+        font-weight: 600;
+        margin-left: 12rem;
+        margin-bottom: 2rem;
+    }
+    .pawan h5{
+        font-size: 20px;
+        font-weight: 550;
+    }
+    .crd1{
+        display: none;
+          width: 183%;
+    height: auto;
+    top: -28rem;
+    }
+    .us h2{
+        display: none;
+        font-size: 25px;
+        font-weight: 600;
+        margin-left: -16rem;
+    }
+    .buybtn{
+        display: block;   
+        color: #000;
+        background-color: var(--primary-color);
+        padding: 10px 10px;
+        text-decoration: none;
+        font-size: 21px;
+        text-align: center;
+        border-radius: 8px;
+        cursor: pointer;
+        height: auto;
+        width: 143vw;
+    }
+  /*  .buybtn{
+    display: block;   
+    color: #000;
+    background-color: var(--primary-color);
+    padding: 20px 10px;
+    text-decoration: none;
+    font-size: 21px;
+   border-radius: 5px;
+    cursor: pointer;
+    margin-left: -18rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-top: 14rem;
+   } */
+   .cdr a{
+       display: block;
+       margin-right: 34rem;
+       margin-left: -7rem;
+         
+   }
+.us img{
+    display: none;
+    height: 45vh;
+    width: 152vw;
+   
+}
+.us h5{
+    display: none;
+    padding-top: 29rem; 
+}
+.us p{
+   display: none;
+    font-size: 1.1rem;
+    padding-left: 5rem;
+    padding-right: -2rem;
+    margin-right: -12rem;
+    padding-top: 9rem;
+}
+.food img{
+    display: none;
+    height: 45vh;
+    width: 152vw;
+}
+.food p{
+    display: none;
+    font-size: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-left: -18rem;
+    padding-top: 21rem;
+}
+.think, .think1 , .think1 h4 ,.think1 p{
+    display: none;
+}
+
+}

@@ -1,0 +1,75 @@
+<div style="float:left;width: 100%;" class="p">
+<div class="container b mt-5 mb-5"  [ngStyle]="{'width': cardlist.length >0  ? '70%' : '100%' ,float:'left'}">
+
+    <div class="row">
+
+        <div class="col-lg-4" *ngFor="let fd of foodData">
+
+            <div class="foodbox mt-3 mb-3">
+               <img  src="{{fd.foodImg}}" >          <!--  [routerLink]="['/menu',fd.id]"-->
+                <h1>{{fd.foodName}}</h1>
+                <p>{{fd.foodDetails}}</p>
+                <p>{{fd.foodPrice | currency:'INR'}}</p>
+                <br/>
+                <span type="button" class="btnn sid" (click)="removeCardItem(fd)" *ngIf="fd.isAdded">-</span>
+                <span class="text-center" *ngIf="fd.isAdded">{{[(fd.quantity)]}}</span>
+                <span type="button" class="btnn" (click)="addtocart(fd)" *ngIf="fd.isAdded" >+</span>
+                <br/><br/>
+                <a class="buybtn" (click)="addtocart(fd)"  *ngIf="!fd.isAdded && !fd.notAvailable" >Add To Card  &nbsp;<i class="bi bi-bag"></i></a>   <!-- [hidden]="showMe" -->
+              <p style="color: red;" *ngIf="fd.notAvailable" >this item is not available</p>
+               
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class=" b1 " >
+
+<div class="col-lg-4 card"  *ngFor="let fd of cardlist"  [ngStyle]="{'width': cardlist.length >0  ? '25%' : '' }">
+
+    <div class="box" >
+        <img src="{{fd.foodImg}}">
+        <h1>{{fd.foodName}}</h1>
+        <p>{{fd.foodPrice | currency:'INR'}}</p>
+
+        <div class="col-md-8 quan">
+            <div class="card-body">
+                
+                    ₹{{fd.foodPrice}} × {{fd.quantity}} = ₹{{getItemTotalAmount(fd.foodPrice , fd.quantity)}}
+                
+                <br>
+                <span type="button" class="bnn btn-outline-danger btn-sm " (click)="removeItem(fd)"><i class="bi bi-trash" ></i></span>
+                        <span type="button" class="bnn btn-outline-danger btn-sm" (click)="removeCardItem(fd)">-</span>
+                        <span class="text-center">{{[(fd.quantity)]}}</span>
+                        <span type="button" class="bnn btn-outline-success btn-sm" (click)="addtocart(fd)">+</span>
+
+            </div>
+                
+           
+        </div>
+        
+    </div>
+    
+</div>
+
+<button class="btn" routerLink="../cardpage"   [ngStyle]="{'display': cardlist.length >0 ? 'block' : 'none' }">CheckOut</button>                  <!--[disabled]="cardlist.length>0"-->
+    <span type="button" class="butn " (click)=" emptycart()" [ngStyle]="{'display': cardlist.length >0 ? 'block' : 'none'}" >clear</span>
+</div>
+
+
+
+</div>
+
+<!-- https://www.freakyjolly.com/stripe-payment-checkout-gateway-angular-tutorial/ -->

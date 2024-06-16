@@ -1,0 +1,99 @@
+
+<div class="crd">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="text-center">
+            <h1>Registration</h1>
+            <h6>Register Yourself</h6>
+  
+          </div>
+         
+          <form [formGroup]="signupForm" (ngSubmit)="signupUser()">
+     <div class="row">      
+        <div class="col-md-6">
+            <div class="form-group ">
+              <label for="firstname"><b>Firstname : </b></label>
+              <input type="text" class="form-control" placeholder="Enter First Name" formControlName="name" (keydown)="onKeyDown($event)">
+              <div class="error"
+                *ngIf="(signupFormControl['name'].touched || submitted) && (signupFormControl['name']['errors']?signupFormControl['name']['errors']['required'] : '')">
+                field is required</div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group ">
+              <label for="surname"><b>Lastname : </b></label>
+              <input type="text" class="form-control" id="surname" placeholder="Enter Surname" formControlName="surname" (keydown)="onKeyDown($event)">
+            </div>
+             <div class="error"
+                *ngIf="(signupFormControl['surname'].touched || submitted) && (signupFormControl['surname']['errors']?signupFormControl['surname']['errors']['required'] : '')">
+                field is required</div>
+        </div>
+     </div>
+    
+     <div class="row">      
+        <div class="col-md-6">
+            <div class="form-group ">
+              <label for="dob"><b>DOB : </b></label>
+              <input type="text" class="form-control" id="dob" placeholder="Enter Date Of Birth" formControlName="dtofbth">
+           </div>
+            <div class="error"
+            *ngIf="(signupFormControl['dtofbth'].touched || submitted) && (signupFormControl['dtofbth']['errors']?signupFormControl['dtofbth']['errors']['required'] : '')">
+            field is required</div>
+        </div>
+  
+        <div class="col-md-6"> 
+            <div class="form-group">
+              <label for="contact"><b>Mobile : </b></label>
+              <input type="number" class="form-control" id="contact" placeholder="Enter Contact"
+                formControlName="mobile" (keydown)="keydown($event)">
+            </div>
+            <div class="error"
+            *ngIf="(signupFormControl['mobile'].touched || submitted) && (signupFormControl['mobile']['errors']?signupFormControl['mobile']['errors']['required'] : '')">
+            field is required</div>
+             <span  class="error" *ngIf="(signupFormControl['mobile'].touched || submitted) && (signupFormControl['mobile']['errors']?signupFormControl['mobile']['errors']['pattern'] : '')">
+            10 digit required</span>
+        </div>
+        
+           
+    
+     </div>
+           
+     <div class="row">      
+        
+
+      
+        <div class="col-md-6">
+            <div class="form-group">
+              <label for="email"><b>Email : </b></label>
+              <input type="email" name="email" class="form-control"  placeholder="Enter Email" formControlName="email">
+           </div>
+            <div class="error"
+            *ngIf="(signupFormControl['email'].touched || submitted) && (signupFormControl['email']['errors']?signupFormControl['email']['errors']['required'] : '')">
+           email is required</div>
+           <div class="error"
+           *ngIf="(signupFormControl['email'].touched || submitted) && (signupFormControl['email']['errors']?signupFormControl['email']['errors']['pattern'] : '')">
+        please enter valid email</div>
+        </div> 
+  
+        <div class="col-md-6">
+          <div class="form-group ">
+            <label for="password"><b>Password : </b></label>
+            <input type="password" class="form-control" id="pass" placeholder="Enter Password" formControlName="password">
+         </div>
+          <div class="error"
+          *ngIf="(signupFormControl['password'].touched || submitted) && (signupFormControl['password']['errors']?signupFormControl['password']['errors']['required'] : '')">
+          field is required</div>
+      </div>
+
+     </div>     
+            <button type="submit" class="btn btn-success" [disabled]="!signupForm.valid">Register</button> <!-- [disabled]="!signupForm.valid"-->
+  
+          </form>
+           
+          
+        </div>
+      </div>
+    </div>
+  </div>

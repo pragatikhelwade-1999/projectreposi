@@ -1,0 +1,99 @@
+ .back{
+     
+     background-image: url(../../../assets/img/food.jpg);
+    height: 130%;
+     width: 100%;
+     background-repeat: no-repeat;
+     background-size: cover;
+    padding-top: 5rem;
+    
+ }
+ .pre ,.post{
+    margin-top: -3rem;
+    margin-left: 34rem;
+ }
+ 
+ .feedback{
+  
+    width: 780px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.3);
+  
+    
+}
+.feedback h2{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+.feedback p{
+    margin-left: 1rem;
+   
+}
+.feedback h4{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.feedback label{
+    margin-left: 1rem;
+}
+.rate{
+    margin-left: 3rem;
+}
+.area{
+    margin-left: 43rem;
+    margin-top: -3rem;
+}
+textarea{
+    margin-top: 1rem;
+    margin-bottom: 1.4rem;
+}
+ .control{
+     margin-left: .3rem;
+     width: 48vw;
+     height: 5vh;
+     border-radius: 5px;
+ }
+ .but{
+     margin-left: 20rem;
+    background:#43a7d5;
+    color:#fff;
+    padding:12px;
+    border:0
+    
+ }
+
+ @media only screen 
+and (min-device-width: 768px) 
+and (max-device-width:1024px) { 
+    .control{
+       min-width: 89vw;
+       max-width: 100vw;
+    }
+}
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width:767px) { 
+.back{
+    min-width: 170%;
+    max-width: 190%;
+}
+ .feedback{
+   width: 544px;
+} 
+.control{
+    width: 129vw;
+}
+textarea{
+    width: 32rem;
+}
+.area{
+    margin-left: 28rem;
+}
+.pre ,.post{
+    margin-left: 22rem;
+}
+}

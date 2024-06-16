@@ -1,0 +1,51 @@
+.navbar-brand img{
+    background-repeat: no-repeat;
+    width: 6vw;
+}
+.navbar-brand{
+    font-style: italic;
+    font-size: 1.9rem;
+    color: rgb(238, 76, 76);
+    font-weight: bold;
+    text-decoration: underline;
+}
+.navbar-light .navbar-nav .nav-link
+{
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+   
+}
+.navbar-light .navbar-nav .nav-link.active-link
+{
+    color: var(--primary-color);
+   text-decoration: underline;
+   
+}
+.navbar{
+    color: rgb(22, 21, 21);
+   
+    
+}
+
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width:1024px) {  
+    .collapse{
+         text-align: center;
+    }
+}
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width:767px) { 
+    .navbar-toggler{
+       
+        margin-right: -16rem;
+   }
+   .collapse{
+    text-align: center;
+   }
+   .nav-item{
+       margin-left: 18rem;
+   }
+}

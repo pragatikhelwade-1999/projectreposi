@@ -1,0 +1,259 @@
+.p{
+  background-color: rgb(234, 239, 244);
+}
+
+.foodbox{
+    padding: 10px 10px;
+}
+.foodbox img{
+
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.foodbox h1{
+  text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.foodbox p{
+  text-align: center;
+}
+.buybtn{
+    color: #000;
+    background-color: var(--primary-color);
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5rem;
+}
+.btnn {
+ align-items: center;
+  border: 1px solid black;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.sid{
+  margin-left: 6rem;
+}
+.bnn{
+  border: 1px solid black;
+  margin: 10px;
+}
+.remove{
+   margin-left: 1rem;
+    color: #000;
+    background-color:rgba(239, 5, 5, 0.748);
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.b1{
+    margin-top: 5rem;
+    margin-right: 3rem;
+   
+}
+.card{
+    padding-left: 2rem;
+    padding-top: 1rem;
+   margin-bottom: 1rem;
+    float:right;
+   
+   
+    
+}
+box{
+  
+    height: auto;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  
+   
+}
+.box img{
+  width: 5vw;
+  height: 9vh;
+ margin-top: 1rem;
+}
+.box h1{
+  margin-left: 8rem;
+  margin-top: -3rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+.box p{
+  margin-top: 2rem;
+}
+.btn{
+  margin-top: -3rem;
+    margin-left: 70rem;
+    height: 6vh;
+    width: 8vw;
+    background-color: var(--primary-color);
+   color:white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 1px;
+}
+.btn:hover{
+    background:rgb(1, 1, 111);
+    color: white;
+}
+.butn{
+ 
+    margin-top: -3rem;
+    margin-left: 83rem;
+    height: 6vh;
+    width: 8vw;
+    background:rgb(255, 1, 1);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 1px;
+}
+
+.text-center{
+    border: 1px solid black;
+    padding: 6px;
+}
+.card-body{
+  margin-left: 10rem;
+    margin-right: -15rem;
+}
+.quan{
+  margin-top: -55px;
+  margin-left: -3rem;
+}
+
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width:1024px) {  
+    .foodbox img{
+        width: 113% !important;
+       
+    }
+    .buybtn{
+      margin-left: 19rem;
+    }
+      /*.btn{
+          margin-top: 250rem;
+          margin-left: -13rem;
+          height: 6vh;
+          width: 13vw;
+          margin-bottom: 2rem;
+      }*/
+       .btn{
+        margin-left: 31rem;
+        width: 17vw;
+        margin-top: 283.99rem;
+      }
+       .butn{
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        margin-left: 12rem;
+        width: 18vw;
+        margin-top: -4rem;
+      }  
+      .card{
+        width: 65% !important;
+        margin-left: -9rem;
+        margin-right: 5rem;
+        margin-bottom: 1rem;
+        margin-top: 5rem;
+      }
+      .box img{
+        width: 13vw;
+      }
+         
+}
+
+
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width:767px) { 
+.foodbox{
+    width: 158% !important;
+    height: auto;
+    padding-left: 2rem;
+  }
+  .buybtn{
+    margin-left: 15rem;
+  }
+  .btn{
+    margin-bottom: -6rem;
+    margin-left: 11rem;
+    width: 28vw;
+  }
+  .butn{
+    margin-bottom: 2rem;
+    margin-left: 23rem;
+    width: 28vw;
+  }
+  .card{
+   width: 98% !important;
+  
+     margin-right: -10rem; 
+    
+     margin-top: 5rem;
+  }
+  .b1{
+    margin-top: 250rem;
+  }
+  .card-body h1{
+      display: none;
+  }
+  .p{
+    
+    background-color: white;
+  }
+  .box img{
+    width: 20vw;
+  }
+  .butn{
+    margin-top: 43px;
+  }
+  
+}
+
+
+/*addtoCart(product: any) {
+    
+    product.quantity += 1;
+    
+    if(!this.cartItemList.some((p: { id: any; }) => p.id === product.id))
+    {
+    this.cartItemList.push(product);
+    console.log(this.cartItemList)
+  }
+  }
+  
+
+
+  removeCardItem(product: any) {
+    product.quantity -= 1;
+  }
+  removeitem(product:any){
+    this.cartItemList.map((a: any, index: any) => {   
+        if (product.id === a.id) {
+            this.cartItemList.splice(index, 1);                }
+        })
+      }
+       }
+*/    

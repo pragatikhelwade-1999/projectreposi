@@ -1,0 +1,276 @@
+
+<div class="container">
+    
+    <a class="add" data-bs-toggle="modal" data-bs-target="#here" >Add Item</a>
+    <div class="row">
+        
+        <div class="col-lg-3 mt-3" *ngFor="let fd of foodData;index as i ">
+            <div class="foodbox " >
+                <img src="{{fd.foodImg}}" />
+                <h1>{{fd.foodName}}</h1>
+                <p>{{fd.foodPrice | currency:'INR'}}</p>
+                <a class="btnn1 "  >Not Available &nbsp;</a>
+                <a class="btnn " >Available &nbsp;</a>
+                <i  data-bs-toggle="modal"  data-bs-target="#there" (click)="edit(fd)"  class="bi bi-pencil-square pencil"></i>
+                
+            </div>
+
+        </div>
+
+       
+      
+    </div>
+
+
+
+    <div class="modal fade" id="here" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Food Item</h5>
+                    <button type="button" id="cancel" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                 <form [formGroup]="adminForm" (ngSubmit)="adminUser()">
+                   
+                   <div class="form-group">
+                        <label for="surname"><b>Food Image : </b></label>
+                        <input type="text" class="form-control"  placeholder="Enter Food image path " formControlName="foodImg">
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="surname"><b>Food Name : </b></label>
+                        <input type="text" class="form-control"  placeholder="Enter Food Name " formControlName="foodName">
+                    </div>
+                    <div style="color: red;"
+                    *ngIf="(adminFormControl['foodName'].touched || submitted) && (adminFormControl['foodName']['errors']?adminFormControl['foodName']['errors']['required'] : '')">
+                    field is required</div>
+
+                    <div class="form-group">
+                        <label for="surname"><b>Food Price : </b></label>
+                        <input type="text" class="form-control"  placeholder="Enter Food Price " formControlName="foodPrice">
+                    </div>
+                    <div style="color: red;"
+                    *ngIf="(adminFormControl['foodPrice'].touched || submitted) && (adminFormControl['foodPrice']['errors']?adminFormControl['foodPrice']['errors']['required'] : '')">
+                    field is required</div>
+
+                    <button type="submit"class="btn btn-success"  >Add</button> 
+                </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="modal fade" id="there" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Food Item</h5>
+                    <button type="button"  id="cancel" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                 <form [formGroup]="updateForm">
+                     <div class="form-group">
+                        <label for="surname"><b>Food Image : </b></label>
+                        <input type="text" class="form-control" id="image" placeholder="Enter Food " formControlName="foodImg" >
+                    </div> 
+
+                    <div class="form-group">
+                        <label for="surname"><b>Food Name : </b></label>
+                        <input type="text"  class="form-control"  placeholder="Enter Food Name "formControlName="foodName"  >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="surname"><b>Food Price : </b></label>
+                        <input type="text" class="form-control"   placeholder="Enter Food Price " formControlName="foodPrice" >
+                    </div>
+
+                    <button type="submit"class="btn btn-success" (click)="updateproduct(updateForm)">Edit</button> 
+                </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div> 
+
+
+
+
+
+
+<nav class="navbar  navbar-light  bg-info mt-5">
+    <div class="container-fluid">
+        <h1 style="color:aliceblue;margin-left: 35rem;">Register Form</h1>
+        <div class="d-flex">
+            <!-- <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn-success">Add Customer</button> -->
+
+        </div>
+    </div>
+</nav>
+
+<table class="table mt-3" id="users">
+    <thead>
+        <tr>
+            <th scope="col" >Id</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Date of birthday</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+           <td>{{user.name}}</td>
+              <td>{{user.surname}}</td>
+              <td>{{user.dtofbth}}</td>
+            <td>{{user.mobile}}</td>
+           
+            <td>{{user.email}}</td>
+            <td>{{user.password}}</td> 
+               
+        </tr>
+         </tbody>
+</table>
+
+    
+
+
+
+
+
+<nav class="navbar  navbar-light  bg-danger mt-5">
+    <div class="container-fluid">
+        <h1 style="color:aliceblue;margin-left: 35rem;">ContactUs Form</h1>
+       
+    </div>
+</nav>
+
+<table class="table mt-3" id="user">
+    <thead>
+        <tr>
+            <th scope="col" >Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Decription</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let users of user">
+            <td>{{users.id}}</td>
+           <td>{{users.name}}</td>
+             <td>{{users.email}}</td>
+            <td>{{users.subject}}</td> 
+            <td>{{users.description}}</td>
+               <!-- <td>
+                <button class="btn btn-info mx-3">Edit</button>
+                <button class="btn btn-danger mx-2"  click=(deletesignupUsers(id))>Delete</button>
+            </td> -->
+             
+        </tr>
+         </tbody>
+</table>
+
+    
+
+
+<nav class="navbar  navbar-light  bg-success mt-5">
+    <div class="container-fluid">
+        <h1 style="color:aliceblue;margin-left: 35rem;">FeedBack Form</h1>
+       
+    </div>
+</nav>
+
+<table class="table mt-3" id="use">
+    <thead>
+        <tr>
+            <th scope="col" >Id</th>
+            <th scope="col">rating</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Taste Of Meal</th>
+            <th scope="col">suggestion</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let us of use">
+            <td>{{us.id}}</td>
+           <td>{{us.rate}}</td>
+             <td>{{us.Rat}}</td>
+            <td>{{us.taste}}</td> 
+            <td>{{us.textinput}}</td>
+               
+             
+        </tr>
+         </tbody>
+</table>
+
+  
+
+
+
+
+
+
+
+
+
+ 
+  <!-- 
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Customer Detail</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formcontrolName="name">
+                 
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">last name</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" formcontrolName="surname">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Dtof birth</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formcontrolName="dtofbth">
+                   
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">mobile</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" formcontrolName="mobile">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formcontrolName="email">
+                   
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" formcontrolName="password">
+                  </div>
+                
+                
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" >Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+-->  

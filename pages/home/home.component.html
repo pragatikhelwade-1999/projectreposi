@@ -1,0 +1,126 @@
+<div class="banner">
+
+   
+
+        <!-- <owl-carousel-o [options]="customOptions">
+            
+            <ng-template carouselSlide>  <img src="../../../assets/img/r11.png" > </ng-template>
+            <ng-template carouselSlide > <img src="../../../assets/img/r21.jpg" ></ng-template>
+            <ng-template carouselSlide > <img src="../../../assets/img/R.jpg" ></ng-template>
+                </owl-carousel-o> -->
+                
+               
+            
+
+      <ngb-carousel>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper1">
+                <img src="../../../assets/img/r11.png" >
+                
+            </div>
+           
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper2">
+                <img src="../../../assets/img/R.jpg" >
+            </div>
+            
+        </ng-template>
+        <ng-template ngbSlide >
+            <div class="picsum-img-wrapper3">
+                <img src="../../../assets/img/r21.jpg" >
+            </div>
+           
+        </ng-template>
+    </ngb-carousel> 
+
+
+   <div class="content">
+
+    
+    
+        <h1 class="mb-5">Fresh Cooked Food<br> At Your Door</h1>
+        <a routerLink="menu">ORDER NOW <i class="bi bi-arrow-right"></i></a>
+    </div>
+</div>
+
+
+<div class="container mt-5 mb-5">
+    <h1 class="text-center ">How To Get <span class="high">Fresh Food</span></h1>
+    <div class="row mt-5">
+       
+        <div class="col-lg-4 mt-2" *ngFor="let St of select">
+            <div class="stepBox">
+               <h1>{{St.id}}</h1>
+               <p>{{St.Name}}</p>
+            </div>
+        </div>
+
+<!--
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+               <h1>1</h1>
+               <p>select food</p>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+               <h1>2</h1>
+               <p>Fill the details</p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+               <h1>3</h1>
+                <p>your order delivered in minut</p>
+           </div>
+        </div>
+    -->     
+    </div>
+</div>
+
+
+<!--foodbox-->
+
+<div class="container mt-4 mb-4">
+    <h1 class="text-center">Customers <span class="high">Favourites Food</span></h1>
+    <div class="row ">
+
+        <section class="partener ">
+            <div class="containers">
+        
+                <owl-carousel-o [options]="customOptions">
+                    
+                   <ng-template carouselSlide *ngFor="let fd of foodData;">  <img src="{{fd.foodImg}}"> <p>{{fd.foodName}} </p></ng-template>  
+                   
+                </owl-carousel-o>
+                
+                
+            
+            </div>
+        </section>
+        
+    </div>
+     <a routerLink="menu" class="viewmorebtn">Order Here <i class="bi bi-arrow-right"></i></a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

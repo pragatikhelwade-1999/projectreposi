@@ -1,0 +1,93 @@
+.crd{
+    background-image:url(../../assets/img/food.jpg) ;
+    height: 545px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+.card{
+    position: absolute;
+    border: none;
+    width: 1000px;
+    height: auto;
+    padding: 40px;
+    top: 53%;
+    left: 50%;
+    box-sizing: border-box;
+    transform: translate(-50%,-50%);
+    background: rgba(9, 38, 1, 0.5);
+   
+   
+}
+.text-center h1 {
+    color: #fff;
+}
+.text-center h6{
+    color: #fff;
+    margin-bottom: 3rem;
+}
+.form-control{
+    width: 57vh;
+    height: 40px;
+}
+.form-group label{
+    color: #fff;
+    padding: .8rem;
+    
+ }
+.btn{
+    height: 5vh;
+    width: 100px;
+    background:rgb(1, 1, 111);
+    margin-left: 25rem;
+    margin-top: 4rem;
+}
+.btn:hover{
+    background-color: blue;
+}
+.error{
+    color: red;
+}
+
+
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width:1024px) { 
+
+    .crd{
+        height: 949px;
+    }
+    .card{
+        width: 672px;
+        top: 54%;
+    }
+    .form-control{
+        width: 25vh;
+    }
+    .btn{
+        margin-left: 16rem;
+    }
+}
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width:767px) { 
+    .crd{
+        height: 138vh;
+        min-width: 42rem;
+        max-width: 50rem;
+    }
+    .card{
+        min-width: 456px;
+        max-width: 500px;
+        margin-left: 9rem;
+        margin-top: 4rem;
+        top: 76%;
+    }
+    .form-control{
+        width: 45vh;
+    }
+    .btn{
+        margin-left: 10rem;
+    }
+}

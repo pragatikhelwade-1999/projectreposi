@@ -1,0 +1,156 @@
+
+
+
+
+.banner .picsum-img-wrapper3 img {
+    width: 102vw;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+.picsum-img-wrapper2 img {
+    width: 100vw;
+    height: 600px;
+}
+.picsum-img-wrapper1 img {
+    width: 100vw;
+    height: 600px;
+}
+.content{
+    top: 30%;
+    position: absolute;
+    left: 10%;
+}
+.content h1{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+.content a{
+    text-decoration: none;
+    background-color: rgb(238, 13, 13);
+    
+    color:#fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+   
+}
+.content a:hover{
+    background-color: rgb(39, 13, 238);
+    color: white;
+}
+.stepBox{
+    background-color: black;
+    padding: 20px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.stepBox h1{
+    font-size: 50px;
+    font-weight: bold;
+    color:var(--primary-color);
+}
+.stepBox p{
+    font-size: 20px;
+    color: #fff;
+}
+.high{
+    color: var(--primary-color);
+     font-weight: bold;
+}
+/*
+.foodbox{
+    padding: 10px 5px;
+}
+.foodbox img{
+
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.foodbox h1{
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}*/
+.viewmorebtn{
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #000;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-left: 36rem;
+   
+}
+
+.partener img{
+   transition: all .3s ease;
+     width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+.partener img:hover{
+    box-shadow: 0 0 10px 1px rgb(163, 94, 8);
+    
+    }
+    
+    .partener p{
+        text-align: center;
+       
+    }
+    .picsum-img{
+        width: 20rem;
+        display: inline-block;
+    }
+
+
+
+
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width:1024px) {  
+    
+    .content h1{
+         font-size: 34px;
+       }
+    .viewmorebtn{
+       
+        margin-left: 1rem;
+       } 
+}
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width:767px) {  
+
+    .banner{
+        height: 600px;
+        width: 171vw;
+    }
+    .picsum-img-wrapper1 img{
+        width: 171vw;
+    }
+    .picsum-img-wrapper2 img{
+       width: 165vw;
+    }
+  .banner  .picsum-img-wrapper3 img{
+        width: 169vw;
+    }
+    .content h1{
+        font-size: 34px;
+      }
+      .stepBox{
+      width: 164vw;
+    }
+   
+    .viewmorebtn{
+       
+        margin-left: 1rem;
+       } 
+       
+}

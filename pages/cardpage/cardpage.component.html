@@ -1,0 +1,112 @@
+<div class="container">
+<div class="card cart mb-5">
+   <h1>Make Payment</h1>
+  
+<form [formGroup]="checkoutForm" (ngSubmit)="signupUser()">
+    <div class="row">      
+       <div class="col-md-12">
+           <div class="form-group ">
+             <label for="firstname"><b>Card Number : </b></label>
+             <input type="text" class="form-control" placeholder="Enter Your Card Number" formControlName="number">
+             <div style="color: red"
+               *ngIf="(signupFormControl['number'].touched || submitted) && (signupFormControl['number']['errors']?signupFormControl['number']['errors']['required'] : '')">
+              minimun 16 digit required</div>
+           </div>
+       </div>
+
+       <div class="col-md-12">
+           <div class="form-group ">
+             <label for="surname"><b>Name Of Card : </b></label>
+             <input type="text" class="form-control" id="surname" placeholder="Enter Your Name on Card" formControlName="name">
+           </div>
+            <div class="error"
+               *ngIf="(signupFormControl['name'].touched || submitted) && (signupFormControl['name']['errors']?signupFormControl['name']['errors']['required'] : '')">
+               field is required</div>
+       </div>
+    
+    
+       <div class="col-md-12 form-group type">
+        <label for="surname"><b>Select Card Type : </b></label>
+        <select name="area" class="form-control" >
+           <option value="arti"> Select Card</option>
+           <option value="machine">ATM card</option>
+          <option value="machine">debit card</option>
+          <option value="data">credit card</option>
+          <option value="hign">prepaid card</option>
+          <option value="digital">electronic card</option>
+           
+        </select>
+      </div>
+
+      <div class="select">
+      <div class="col-md-12 form-group1">
+        <label for="surname"><b>Expiry Year/Month : </b></label>
+        <select name="area" id="car" class="form-control" >
+            <option value="arti"> Year</option>
+           <option value="arti"> 2001</option>
+           <option value="machine">2002</option>
+          <option value="data">2003</option>
+          <option value="hign">2004</option>
+          <option value="digital">2005</option>
+          <option value="xyz">2006</option>
+          <option value="xyz">2007</option>
+          <option value="xyz">2008</option>
+          <option value="xyz">2009</option>
+          <option value="xyz">2010</option>
+          <option value="xyz">2011</option>
+          <option value="xyz">2012</option>
+          <option value="xyz">2013</option>
+          <option value="xyz">2014</option>
+          <option value="xyz">2015</option>
+          <option value="xyz">2016</option>
+          <option value="xyz">2017</option>
+          <option value="xyz">2018</option>
+          <option value="xyz">2019</option>
+          <option value="xyz">2020</option>
+          <option value="xyz">2021</option>
+          <option value="xyz">2022</option>
+          <option value="xyz">2023</option>
+          <option value="xyz">2024</option>
+          <option value="xyz">2025</option>
+        </select>
+      </div>
+    </div>
+        
+        <select name="area" id="car" class="form-control car" >
+            <option value="arti">Month</option>
+           <option value="arti">January</option>
+           <option value="machine">February</option>
+          <option value="data">March</option>
+          <option value="hign">April</option>
+          <option value="digital">May</option>
+          <option value="xyz">June</option>
+          <option value="xyz">July</option>
+          <option value="xyz">August</option>
+          <option value="xyz">September</option>
+          <option value="xyz">October</option>
+          <option value="xyz">November</option>
+          <option value="xyz">December</option>
+        </select>
+      </div>
+   
+      <div class="col-md-12">
+        <div class="form-group ">
+          <label for="surname"><b>Amount : </b></label>
+          <input type="text" class="form-control" id="amount" placeholder="Enter Your Amount" formControlName="amount">
+        </div>
+         <div class="error"
+            *ngIf="(signupFormControl['amount'].touched || submitted) && (signupFormControl['amount']['errors']?signupFormControl['amount']['errors']['required'] : '')">
+            field is required</div>
+    </div>
+ 
+   
+    <div class="col-md-6  ct">
+        <img src="../../../assets/img/cart.jpg">
+    </div>
+    
+     
+           <button type="submit" class="btn btn-success">Make Payment</button> <!-- [disabled]="!signupForm.valid"-->
+ 
+         </form>
+        </div>
+    </div>

@@ -1,0 +1,39 @@
+<div class="crd">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card ">
+                <div class="text-center">
+                    <h1>Login</h1>
+                    <h6>please enter email and password</h6>
+                </div>
+
+                <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+
+                    <div class="form-group">
+                        <label for="name">Email : </label>
+                        <input type="text" placeholder="Enter Email" name="name" class="form-control" formControlName="email">
+                        <div style="color: red;"
+                        *ngIf="(loginFormControl['email'].touched || submitted) && (loginFormControl['email']['errors']?loginFormControl['email']['errors']['required'] : '')">
+                        field is required</div>
+                        <div style="color:red ;"
+                        *ngIf="(loginFormControl['email'].touched || submitted) && (loginFormControl['email']['errors']?loginFormControl['email']['errors']['pattern'] : '')">
+                     please enter valid email</div>
+                    </div>
+                    <!-- <span style="color: red;" *ngIf="user && user.invalid && user.touched ">this field required</span> -->
+
+
+                    <div class="form-group">
+                        <label for="password">Password : </label>
+                        <input type="password" placeholder="Enter Password" name="pass" class="form-control" formControlName="password">
+                        <div style="color: red;"
+                        *ngIf="(loginFormControl['password'].touched || submitted) && (loginFormControl['password']['errors']?loginFormControl['password']['errors']['required'] : '')">
+                        field is required</div>
+                    </div>
+                    
+                    <!-- <span style="color: red;" *ngIf="password && password.invalid && password.touched ">this field required minimum 5 digit</span> -->
+
+
+                        <button type="submit" class="btn btn-success" [disabled]="!loginForm.valid">Login</button>
+                </form>
+                <a style="color: white;margin-top: 10px;" routerLink="/register">New User ? Click To Register!!</a>
+            </div>

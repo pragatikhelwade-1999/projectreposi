@@ -1,0 +1,124 @@
+.nik{
+    background-image: url(../../../assets/img/food.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    padding-top: 5rem;
+}
+.anot{
+  
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+    
+}
+.contact h2{
+    text-align: center;
+    padding-top: 4rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.contact p{
+    text-align: center;
+    margin-bottom: -16rem;
+}
+.form-group {
+    width: 41vw;
+    padding: .5rem;
+    margin-left: 4rem;
+}
+.form-group label{
+    padding-bottom: .6rem;
+}
+.btn{
+    margin-left: 19rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.error{
+    color: red;
+    margin-left: 0rem;
+}
+
+
+.sect{
+    width: 30rem;
+    height: auto;
+    margin-left: 48rem;
+    bottom: -19rem;
+    padding: 3rem;
+}
+.sect1 h3{
+    font-weight: bold;
+    white-space: nowrap;
+    padding-bottom: 1rem;
+   
+}
+.sect1 h5{
+    white-space: nowrap;
+}
+
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width:1024px) { 
+    .contact p{
+        margin-bottom: -9rem;
+    }
+ .sect{
+    width: 17rem;
+    margin-left: 25rem;
+    bottom: -15rem;
+ }
+ .sect1 h3{
+    font-size: 1.2rem;
+ }
+ .sect1 h5{
+    font-size: .6rem;
+ }
+}
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width:767px) { 
+     .nik{
+       width: 675px;
+        height: 138vh;
+    padding-top: 10rem;
+    } 
+    .anot{
+
+        min-width: 100%;
+        max-width: 180%;
+        
+    }
+    .form-control{
+        width: 340%;
+    }
+    .form-group label{
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    .contact p{
+        margin-bottom: -11rem;
+    }
+    .sect{
+     
+        margin-bottom: 20rem;
+        margin-top: -17rem;
+        min-width: 26rem;
+        max-width: 30rem;
+        height: auto;
+       margin-left: 6rem;
+    }
+    .sect1 h3{
+        font-size: 1.6rem;
+        margin-left: 2rem;
+     }
+     .sect1 h5{
+        font-size: .9rem;
+        margin-left: 1rem;
+     }
+    .btn{    
+      margin-left: 19rem;
+    }
+   
+}
